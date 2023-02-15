@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="material.gpa.calculator">
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/gpa_image"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/gpa_image"
+        android:supportsRtl="false"
+        android:theme="@style/Theme.GPACalculator">
+        <activity android:name="material.gpa.calculator.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="material.gpa.calculator.SettingsActivity"
+            android:label="Settings">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="material.gpa.calculator.MainActivity"/>
+        </activity>
+
+    </application>
+
+</manifest>

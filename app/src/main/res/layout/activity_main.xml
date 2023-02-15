@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingBottom="24dp"
+        tools:context=".MainActivity"
+        tools:ignore="HardcodedText">
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:theme="@style/AccentEditText"
+            android:id="@+id/previous_credit_layout"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:hint="Credit hours"
+            android:importantForAutofill="no"
+            app:layout_constraintEnd_toStartOf="@+id/previous_GPA_layout"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/previous_credit"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="number"
+                android:nextFocusDown="@+id/previous_GPA" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:theme="@style/AccentEditText"
+            android:id="@+id/previous_GPA_layout"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:hint="Previous GPA"
+            android:importantForAutofill="no"
+            app:layout_constraintBottom_toBottomOf="@+id/previous_credit_layout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/previous_credit_layout"
+            app:layout_constraintTop_toTopOf="@+id/previous_credit_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/previous_GPA"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:inputType="numberDecimal"
+                tools:ignore="TextContrastCheck" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <TextView
+            android:id="@+id/course1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="42dp"
+            android:padding="10dp"
+            android:text="Course 1"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/grade1_spinner"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/previous_credit_layout" />
+
+        <Spinner
+            android:id="@+id/grade1_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/credit_hours1"
+            app:layout_constraintEnd_toStartOf="@+id/credit_hours1"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/course1"
+            app:layout_constraintTop_toTopOf="@+id/credit_hours1" />
+
+        <EditText
+            android:id="@+id/credit_hours1"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            app:layout_constraintBaseline_toBaselineOf="@+id/course1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toEndOf="@+id/grade1_spinner" />
+
+        <TextView
+            android:id="@+id/course2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="42dp"
+            android:padding="10dp"
+            android:text="Course 2"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/grade2_spinner"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course1" />
+
+        <Spinner
+            android:id="@+id/grade2_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/credit_hours2"
+            app:layout_constraintEnd_toStartOf="@+id/credit_hours2"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/course2"
+            app:layout_constraintTop_toTopOf="@+id/credit_hours2" />
+
+        <EditText
+            android:id="@+id/credit_hours2"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            app:layout_constraintBaseline_toBaselineOf="@+id/course2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toEndOf="@id/grade2_spinner" />
+
+        <TextView
+            android:id="@+id/course3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="42dp"
+            android:padding="10dp"
+            android:text="Course 3"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/grade3_spinner"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course2" />
+
+        <Spinner
+            android:id="@+id/grade3_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/credit_hours3"
+            app:layout_constraintEnd_toStartOf="@+id/credit_hours3"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/course3"
+            app:layout_constraintTop_toTopOf="@+id/credit_hours3" />
+
+        <EditText
+            android:id="@+id/credit_hours3"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            app:layout_constraintBaseline_toBaselineOf="@+id/course3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toEndOf="@+id/grade3_spinner" />
+
+        <TextView
+            android:id="@+id/course4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="42dp"
+            android:padding="10dp"
+            android:text="Course 4"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/grade4_spinner"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course3" />
+
+        <Spinner
+            android:id="@+id/grade4_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/credit_hours4"
+            app:layout_constraintEnd_toStartOf="@+id/credit_hours4"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/course4"
+            app:layout_constraintTop_toTopOf="@+id/credit_hours4" />
+
+        <EditText
+            android:id="@+id/credit_hours4"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            app:layout_constraintBaseline_toBaselineOf="@+id/course4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toEndOf="@+id/grade4_spinner" />
+
+        <TextView
+            android:id="@+id/course5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="42dp"
+            android:padding="10dp"
+            android:text="Course 5"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/grade5_spinner"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course4" />
+
+        <Spinner
+            android:id="@+id/grade5_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/credit_hours5"
+            app:layout_constraintEnd_toStartOf="@+id/credit_hours5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/course5"
+            app:layout_constraintTop_toTopOf="@+id/credit_hours5" />
+
+        <EditText
+            android:id="@+id/credit_hours5"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            app:layout_constraintBaseline_toBaselineOf="@+id/course5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toEndOf="@+id/grade5_spinner" />
+
+        <TextView
+            android:id="@+id/course6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="42dp"
+            android:padding="10dp"
+            android:text="Course 6"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="18sp"
+            app:layout_constraintEnd_toStartOf="@+id/grade6_spinner"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/course5" />
+
+        <Spinner
+            android:id="@+id/grade6_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:padding="10dp"
+            app:layout_constraintBottom_toBottomOf="@+id/credit_hours6"
+            app:layout_constraintEnd_toStartOf="@+id/credit_hours6"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/course6"
+            app:layout_constraintTop_toTopOf="@+id/credit_hours6" />
+
+        <EditText
+            android:id="@+id/credit_hours6"
+            android:layout_width="80dp"
+            android:layout_height="0dp"
+            android:ems="10"
+            android:gravity="center"
+            android:hint="0"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            app:layout_constraintBaseline_toBaselineOf="@+id/course6"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.275"
+            app:layout_constraintStart_toEndOf="@+id/grade6_spinner" />
+
+        <LinearLayout
+            android:id="@+id/extra_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintTop_toBottomOf="@+id/course6" />
+
+        <Button
+            style="?attr/materialButtonOutlinedStyle"
+            android:id="@+id/add_course"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="16dp"
+            android:text="Add"
+            android:textColor="?android:colorAccent"
+            app:rippleColor="?android:colorAccent"
+            app:layout_constraintEnd_toStartOf="@+id/calculate"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/extra_layout" />
+
+        <Button
+            android:id="@+id/calculate"
+            android:layout_width="140dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:text="Calculate"
+            app:layout_constraintBottom_toBottomOf="@+id/add_course"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/add_course"
+            app:layout_constraintTop_toTopOf="@+id/add_course" />
+
+        <TextView
+            android:id="@+id/semester_GPA_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:padding="10dp"
+            android:text="Semester GPA"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toStartOf="@+id/semester_GPA"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/add_course" />
+
+        <TextView
+            android:id="@+id/semester_GPA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:text="0.00"
+            android:textColor="?android:colorAccent"
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@+id/semester_GPA_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/semester_GPA_text"
+            app:layout_constraintTop_toTopOf="@+id/semester_GPA_text" />
+
+        <TextView
+            android:id="@+id/cumulative_GPA_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:paddingTop="10dp"
+            android:paddingRight="10dp"
+            android:text="Cumulative GPA"
+            android:textColor="?android:textColorPrimary"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cumulative_GPA"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/semester_GPA_text" />
+
+        <TextView
+            android:id="@+id/cumulative_GPA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="0.00"
+            android:textColor="?android:colorPrimary"
+            android:textSize="48sp"
+            app:layout_constraintBottom_toBottomOf="@+id/cumulative_GPA_text"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/cumulative_GPA_text"
+            app:layout_constraintTop_toTopOf="@+id/cumulative_GPA_text" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

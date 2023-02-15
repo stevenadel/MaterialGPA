@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ListPreference
+        app:defaultValue="system"
+        app:entries="@array/themes_entries"
+        app:entryValues="@array/themes_values"
+        app:key="theme"
+        app:title="Theme"
+        app:useSimpleSummaryProvider="true"
+        app:icon="@drawable/ic_theme" />
+
+    <PreferenceCategory
+        app:title="Course Settings"
+        app:allowDividerAbove="false" />
+
+        <SwitchPreference
+            app:key="a_plus"
+            app:title="A+ as highest grade" />
+
+        <ListPreference
+            app:key="min"
+            app:title="Starting number of courses"
+            app:defaultValue="6"
+            app:entries="@array/min_entries"
+            app:entryValues="@array/min_values"
+            app:useSimpleSummaryProvider="true" />
+
+        <ListPreference
+            app:key="max"
+            app:title="Maximum number of added courses"
+            app:defaultValue="1"
+            app:entries="@array/max_entries"
+            app:entryValues="@array/max_values"
+            app:useSimpleSummaryProvider="true"
+            app:allowDividerBelow="false"/>
+    <PreferenceCategory/>
+</PreferenceScreen>
