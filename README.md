@@ -1,7 +1,7 @@
 # Material GPA
-A simple GPA calculator for android.
-
+A simple GPA calculator for android:
 * Based on Material Design 2
+* Native, written in Java
 * Lightweight & small app size
 * No runtime permissions or ads
 
